@@ -11,11 +11,13 @@ $(function(){
     $('.benefits__more-open').removeClass('none');
    })
 
+   
+
    $('.gallery__inner').slick({
      arrows: true,
      dots: false,
-     nextArrow: '<button type="button" class="slick-next slick-arr"><img src="images/icons/arr-left.svg" alt="next"></button>',
-     prevArrow: '<button type="button" class="slick-prev slick-arr"><img src="images/icons/arr-right.svg" alt="prev"></button>',
+     nextArrow: '<button type="button" class="slick-next slick-arr"><img src="images/icons/arr-right.svg" alt="next"></button>',
+     prevArrow: '<button type="button" class="slick-prev slick-arr"><img src="images/icons/arr-left.svg" alt="prev"></button>',
      slidesToShow: 1,
      slidesToScroll: 1,
      Infinite: true,
@@ -71,8 +73,8 @@ $('.team__slider-info-slider-inner').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   Infinite: true,
-  nextArrow: '<button type="button" class="team__slider-next slick-arr"><img src="images/icons/arr-left.svg" alt="next"></button>',
-  prevArrow: '<button type="button" class="team__slider-prev slick-arr"><img src="images/icons/arr-right.svg" alt="prev"></button>',
+  nextArrow: '<button type="button" class="team__slider-next slick-arr"><img src="images/icons/arr-right.svg" alt="next"></button>',
+  prevArrow: '<button type="button" class="team__slider-prev slick-arr"><img src="images/icons/arr-left.svg" alt="prev"></button>',
 });
 
 $('.revies__inner').slick({
@@ -81,8 +83,8 @@ $('.revies__inner').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   Infinite: true,
-  nextArrow: '<button type="button" class="team__slider-next slick-arr"><img src="images/icons/arr-left.svg" alt="next"></button>',
-  prevArrow: '<button type="button" class="team__slider-prev slick-arr"><img src="images/icons/arr-right.svg" alt="prev"></button>',
+  nextArrow: '<button type="button" class="revies-next slick-arr"><img src="images/icons/arr-right.svg" alt="next"></button>',
+  prevArrow: '<button type="button" class="revies-prev slick-arr"><img src="images/icons/arr-left.svg" alt="prev"></button>',
 });
 
 
@@ -94,7 +96,33 @@ $('.header__burger').on('click', function(){
   $('.header__burger').toggleClass('header__burger--active');
 });
 
+
+
+ 
+  $('.service__more-open').on('click', function(){
+    $('.service__item-6').addClass('on');
+    $('.service__item-7').addClass('on');
+    $('.service__item-8').addClass('on');
+    $('.service__item-9').addClass('on');
+    $('.service__item-10').addClass('on');
+    $('.service__more-open').addClass('none');
+    $('.service__more-close').addClass('active-block');
+   })
+
+   $('.service__more-close').on('click', function(){
+    $('.service__item-6').removeClass('on');
+    $('.service__item-7').removeClass('on');
+    $('.service__item-8').removeClass('on');
+    $('.service__item-9').removeClass('on');
+    $('.service__item-10').removeClass('on');
+
+    $('.benefits__inner-bottom').removeClass('active-grid');
+    $('.service__more-close').removeClass('active-block');
+    $('.service__more-open').removeClass('none');
+   })
 });
+
+
 
 let map;
 
